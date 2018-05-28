@@ -18,11 +18,8 @@ for iter = 1:num_iters
     %
 
     h_x = X * theta;
-    temp1 = theta(1) - (alpha/m)* sum( (h_x - y).*X(:,1) );
-    temp2 = theta(2) - (alpha/m)* sum( (h_x - y).*X(:,2) );
-    theta(1) = temp1;
-    theta(2) = temp2;
-
+    theta = theta - (alpha/m)*X'*(h_x - y) ;
+    
 
     % ============================================================
 

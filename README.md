@@ -1,11 +1,10 @@
 ## Solutions to Andrew Ng's Machine Learning course
 
-### Assignments
-Week 1 : Linear Regression
+### Programming Assignments
 
-Week 2 : Logistic Regression
+Week 2 : Linear Regression
 
-Week 3 :
+Week 3 : Logistic Regression
 
 Week 4 :
 

@@ -16,12 +16,12 @@ grad = zeros(size(theta));
 %               You should set J to the cost.
 %               Compute the partial derivatives and set grad to the partial
 %               derivatives of the cost w.r.t. each parameter in theta
+[J , grad]= costFunction(theta, X, y);
+%Applying Regularization
+constant = lambda/m;
+J = J + (constant/2).*(theta(2:3)'*theta(2:3));
 
-
-
-
-
-
+grad(2:3) = grad(2:3) + constant * theta(2:3);
 % =============================================================
 
 end

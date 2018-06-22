@@ -17,3 +17,7 @@ Week 7 : Support Vector Machines
 Week 8 : Unsupervised Learning
 
 Week 9 : Anomaly Detection
+
+### Reference
+
+[Machine Learning](https://www.coursera.org/learn/machine-learning) - Coursera

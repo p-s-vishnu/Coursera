@@ -16,7 +16,8 @@ sim = 0;
 %
 %
 
-
+normalize     = (x1 - x2);
+sim      =  exp( -sum(normalize.^2) / (2 * sigma.^2) );
 
 
 

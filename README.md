@@ -10,6 +10,10 @@ Week 2 : Linear Regression
 
 Week 3 : Logistic Regression
 
+**Resources**
+* [Brandon foltz](https://www.youtube.com/watch?v=zAULhNrnuL4)
+* [Siraj](https://www.youtube.com/watch?v=D8alok2P468)
+
 Week 4 : Neural Networks: Representation
 
 Week 5 : Neural Networks: Learning

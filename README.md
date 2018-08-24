@@ -4,10 +4,6 @@
 
 Week 2 : Linear Regression
 
-**Resources**
-* [Simple linear regression](https://www.youtube.com/watch?v=ZkjP5RJLQF4)
-* [Siraj's video](https://www.youtube.com/watch?v=uwwWVAgJBcM)
-
 Week 3 : Logistic Regression
 
 **Resources**

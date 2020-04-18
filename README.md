@@ -1,14 +1,12 @@
-## Solutions to Andrew Ng's Machine Learning course
+# Coursera assignments
 
-### Programming Assignments
+### 1. [Machine Learning](https://www.coursera.org/learn/machine-learning) 
 
-Week 2 : Linear Regression
+Week 2 : Linear Regression (Univariate and Multivariate)
+
+Model representation, Cost function, Gradient Descent
 
 Week 3 : Logistic Regression
-
-**Resources**
-* [Brandon foltz](https://www.youtube.com/watch?v=zAULhNrnuL4)
-* [Siraj](https://www.youtube.com/watch?v=D8alok2P468)
 
 Week 4 : Neural Networks: Representation
 
@@ -20,8 +18,13 @@ Week 7 : Support Vector Machines
 
 Week 8 : Unsupervised Learning
 
-Week 9 : Anomaly Detection
+Week 9 : Anomaly Detection and Recommender systems
 
-### Reference
+Week 10: Large scale machine learning
 
-[Machine Learning](https://www.coursera.org/learn/machine-learning) - Coursera
+Week 11: Application example: photo OCR
+
+
+
+### 2. [TensorFlow in Practice Specialization](https://www.coursera.org/specializations/tensorflow-in-practice) 
+

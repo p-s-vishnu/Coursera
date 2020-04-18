@@ -11,6 +11,7 @@
   ```python
   # A simple neural network
   # create data
+  # TensorFlow v2.2
   xs = np.array([-1.0,  0.0, 1.0, 2.0, 3.0, 4.0], dtype=float)
   ys = np.array([-3.0, -1.0, 1.0, 3.0, 5.0, 7.0], dtype=float)
   # create model with layers
@@ -25,6 +26,5 @@
   model.predict([20])
   ```
 
-  
+- You will almost always deal with *probabilities, not certainties*
 
-- You will almost always deal with probabilities, not certainties

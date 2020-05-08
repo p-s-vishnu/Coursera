@@ -104,4 +104,66 @@
 
 - Visualizing convolutional layer
 
-- model.summary()
+- **model.summary()** It shows the model architecture, it even shows how the image dimensions/shape change as it passes through various layers + number of parameters
+
+- **Image generator in tensorflow** :
+
+  ```python
+  from tensorflow.keras.preprocessing.image import ImageGenerator
+  
+  # The directory to the image should be the train/validation folder containing classes 
+  # not the sub directory (/project/train and not /project/train/class1)
+  
+  train_datagen = ImageGenerator(1./255)
+  
+  # flow from directory to load the images from the dir
+  train_generator = train_datagen.flow_from_directory(
+      train_dir, # Name of sub directory -> name of class
+      target_size = (300,300),
+      batch_size = 128, # experiment with various batch sizes to find the imapact of performance
+      class_mode = 'binary'
+  )
+  test_datagen = ImageGenerator(rescale = 1./255) # more at https://machinelearningmastery.com/how-to-normalize-center-and-standardize-images-with-the-imagedatagenerator-in-keras/
+  test_generator = test_datagen.flow_from_directory(
+  	valid_dir,
+      target_size= (300,300),
+      batch_size= 128, # a batch of images considered while training
+      class_mode= "binary"
+  )
+  ```
+
+- Training
+
+  ```python
+  from tensorflow.keras.preprocessing.image import ImageDataGenerator
+  
+  # All images will be rescaled by 1./255
+  train_datagen = ImageDataGenerator(rescale=1/255)
+  validation_datagen = ImageDataGenerator(rescale=1/255)
+  
+  # Number of training images: 1027
+  # Flow training images in batches of 128 using train_datagen generator
+  train_generator = train_datagen.flow_from_directory(
+          '/tmp/horse-or-human/',  # This is the source directory for training images
+          target_size=(300, 300),  # All images will be resized to 150x150
+          batch_size=128,
+          # Since we use binary_crossentropy loss, we need binary labels
+          class_mode='binary')
+  
+  # Number of validation images: 256
+  # Flow training images in batches of 128 using train_datagen generator
+  validation_generator = validation_datagen.flow_from_directory(
+          '/tmp/validation-horse-or-human/',  # This is the source directory for training images
+          target_size=(300, 300),  # All images will be resized to 150x150
+          batch_size=32,
+          # Since we use binary_crossentropy loss, we need binary labels
+          class_mode='binary')
+  
+  history = model.fit(
+        train_generator,
+        steps_per_epoch=8,  
+        epochs=15,
+        verbose=1,
+        validation_data = validation_generator,
+        validation_steps=8)
+  ```
